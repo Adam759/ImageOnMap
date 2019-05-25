@@ -64,9 +64,9 @@ public final class ImageOnMap extends ZPlugin
     
     public File getImagesDirectory() {return imagesDirectory;}
     public File getMapsDirectory() {return mapsDirectory;}
-    public File getImageFile(short mapID)
+    public File getImageFile(int i)
     {
-        return new File(imagesDirectory, "map"+mapID+".png");
+        return new File(imagesDirectory, "map"+i+".png");
     }
     
     @SuppressWarnings ("unchecked")
@@ -76,7 +76,7 @@ public final class ImageOnMap extends ZPlugin
         // Creating the images and maps directories if necessary
         try
         {
-            imagesDirectory = checkPluginDirectory(imagesDirectory, V3Migrator.getOldImagesDirectory(this));
+        	imagesDirectory = checkPluginDirectory(imagesDirectory, V3Migrator.getOldImagesDirectory(this));
             checkPluginDirectory(mapsDirectory);
         }
         catch(IOException ex)
@@ -106,11 +106,12 @@ public final class ImageOnMap extends ZPlugin
                 DeleteCommand.class,
                 GetRemainingCommand.class,
                 ExploreCommand.class,
-                MigrateCommand.class
+                MigrateCommand.class,
+                GetRemainingCommand.class
         );
 
         Commands.registerShortcut("maptool", NewCommand.class, "tomap");
-        Commands.registerShortcut("maptool", ExploreCommand.class, "maps");
+       
     }
 
     @Override
