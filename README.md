@@ -1,4 +1,5 @@
-## Attempting to update ImageOnMap to work with 1.14.x without error.
+## Attempting to update ImageOnMap to work with 1.14.x without error. 
+## Originally brought back up to speed by OTGEngineering -- Thanks for the work!
 ==========
 
 Repo for ImageOnMap, a bukkit plugin.
