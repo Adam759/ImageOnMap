@@ -1,4 +1,4 @@
-## This project is abandoned (for now) I (Xernium) am more likely to make a plugin to replace this one as the plugin currently relies on an outdated API that’s really time intensive to update or rewrite. The one that originally started this and actually wanted my help in maintaining this vanished without a trace (PurpleStormCloud) so until I get this sorted out this project is on HOLD!
+## Attempting to update ImageOnMap to work with 1.14.x without error.
 ==========
 
 Repo for ImageOnMap, a bukkit plugin.
