@@ -40,19 +40,19 @@ public abstract class IoMCommand extends Command
 		if(args.length <= index) throwInvalidArgument(I.t("You need to give a map name."));
 
 		ImageMap map;
-		String mapName = args[index];
+		StringBuilder mapName = new StringBuilder(args[index]);
 
 		if(expand)
 		{
 			for(int i = index + 1, c = args.length; i < c; i++)
 			{
-				mapName += " " + args[i];
+				mapName.append(" ").append(args[i]);
 			}
 		}
 
-		mapName = mapName.trim();
+		mapName = new StringBuilder(mapName.toString().trim());
 
-		map = MapManager.getMap(player.getUniqueId(), mapName);
+		map = MapManager.getMap(player.getUniqueId(), mapName.toString());
 
 		if(map == null) error(I.t("This map does not exist."));
 
