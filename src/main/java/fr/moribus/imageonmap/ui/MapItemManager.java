@@ -248,6 +248,7 @@ public class MapItemManager implements Listener
             ItemStack is = new ItemStack(Material.FILLED_MAP, 1);
             MapMeta mr = (MapMeta) is.getItemMeta();
             mr.setMapId(((MapMeta)player.getInventory().getItemInMainHand().getItemMeta()).getMapId());
+            is.setItemMeta(mr);
             frame.setItem(is);
         }
         
